@@ -1,0 +1,22 @@
+<project name="compile">
+
+    <property name="source.dir"     value="./src"/>
+    <property name="output.dir"   value="./output"/>
+    <property name="jar.dir"     value="./output/jar"/>
+    <property name="jar.file"     value="./output/jar/newClass.jar"/>
+
+    <target name="comp">
+        <mkdir dir="${output.dir}"/>
+        <javac srcdir="${source.dir}" includeantruntime="false" debug="true" destdir="${output.dir}">
+    	</javac>
+    </target>
+
+    <target name="jar" depends="comp">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.file}">
+        	<fileset dir="${jar.dir}">
+        	</fileset>
+        </jar>
+    </target>
+
+</project>
