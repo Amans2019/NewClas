@@ -1,4 +1,4 @@
-<project name="compile">
+<project name="comp">
 
     <property name="source.dir"     value="./src"/>
     <property name="output.dir"   value="./output"/>
